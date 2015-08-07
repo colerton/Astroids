@@ -24,8 +24,9 @@ public class StartGame {
     private static String mapName = "";
     public static void begin(String m){
         mapName=m;
-        OpenWindow.open(); //Calls OpenWindow to pop up Jframe
         SpaceShip playerOne = new SpaceShip("Endeavor"); //Creates a ship
+        OpenWindow.open(); //Calls OpenWindow to pop up Jframe
+        
         
         
     }

@@ -16,34 +16,6 @@ import javax.swing.JFrame;
  */
 public class Main {
     
-    
-    public static void main(String[] args)
-    {
-        startApplet();
-    }
-    
-    public static void startApplet()
-    {
-       JFrame frame = new JFrame(); 
-       frame.setSize(620, 845);
-       
-       final JApplet applet = new GameApplet(); 
-       
-       frame.getContentPane().add(applet);
-       frame.addWindowListener(new WindowAdapter() {
-           @Override
-           public void windowClosing(WindowEvent e) {
-               applet.stop();
-               applet.destroy();
-               System.exit(0);
-           }
-       });
-       
-       applet.init();
-       applet.start();
-       frame.setVisible(true);
-    }
-    
-}
+   
 
 }
