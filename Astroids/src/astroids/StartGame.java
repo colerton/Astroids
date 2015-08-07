@@ -4,12 +4,14 @@
  * and open the template in the editor.
  */
 package astroids;
-
+import astroids.OpenWindow;
 /**
  *
  * @author Taylor
  */
 public class StartGame {
     
-    
+    public static void begin(){
+        OpenWindow.open();
+    }
 }

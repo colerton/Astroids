@@ -10,5 +10,23 @@ package astroids;
  * @author Taylor
  */
 public class SpaceShip {
+    private int xPos;
+    private int yPos;
+    private String name;
+    public SpaceShip(String n){
+       name = n;
+       xPos = 0;
+       yPos = 0;
+        
+    }
     
+    public int getXPos(){
+        return xPos;
+    }
+    public int getYPos(){
+        return yPos;
+    }
+    public String getName(){
+        return name;
+    }
 }
