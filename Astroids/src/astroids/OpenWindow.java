@@ -13,8 +13,10 @@ import javax.swing.WindowConstants;
 public class OpenWindow {
     public static void open() {
         JFrame gameScreen = new JFrame("TestFrame");
-        gameScreen.setSize(800,600);
+        gameScreen.setSize(400,300);
         gameScreen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         gameScreen.setVisible(true);
     }
+    
+    
 }

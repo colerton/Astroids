@@ -29,8 +29,13 @@ public class Menu extends javax.swing.JFrame {
 
         label_title = new javax.swing.JLabel();
         button_start = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        button_world1 = new javax.swing.JButton();
         button_quit = new javax.swing.JButton();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        label_world = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        textarea_worldName = new javax.swing.JTextArea();
+        button_world2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,7 +49,12 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("jButton2");
+        button_world1.setText("world 1");
+        button_world1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_world1ActionPerformed(evt);
+            }
+        });
 
         button_quit.setText("Quit");
         button_quit.addActionListener(new java.awt.event.ActionListener() {
@@ -53,33 +63,86 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        jInternalFrame1.setVisible(true);
+
+        label_world.setText("World");
+
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane1.setEnabled(false);
+        jScrollPane1.setWheelScrollingEnabled(false);
+
+        textarea_worldName.setColumns(20);
+        textarea_worldName.setRows(5);
+        jScrollPane1.setViewportView(textarea_worldName);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label_world)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_world))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        button_world2.setText("world 2");
+        button_world2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_world2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(320, 320, 320)
-                .addComponent(label_title)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(button_start)
-                .addGap(180, 180, 180)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 243, Short.MAX_VALUE)
-                .addComponent(button_quit)
-                .addGap(98, 98, 98))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(320, 320, 320)
+                        .addComponent(label_title))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(button_quit)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(button_start)
+                                .addGap(180, 180, 180)
+                                .addComponent(button_world1)))
+                        .addGap(18, 18, 18)
+                        .addComponent(button_world2)))
+                .addGap(17, 17, 17)
+                .addComponent(jInternalFrame1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addComponent(label_title, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(97, 97, 97)
+                .addGap(58, 58, 58)
+                .addComponent(button_quit)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button_start)
-                    .addComponent(jButton2)
-                    .addComponent(button_quit))
+                    .addComponent(button_world1)
+                    .addComponent(button_world2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jInternalFrame1)
                 .addContainerGap())
         );
 
@@ -104,6 +167,25 @@ public class Menu extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_button_startActionPerformed
+
+    private void button_world1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_world1ActionPerformed
+        
+        //changes the name on the world label
+        textarea_worldName.selectAll();
+        textarea_worldName.setText("");
+        textarea_worldName.append("World 1");
+        //textarea_worldName.setText("");
+        
+    }//GEN-LAST:event_button_world1ActionPerformed
+
+    private void button_world2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_world2ActionPerformed
+        //changes the name on the world label
+        textarea_worldName.selectAll();
+        textarea_worldName.setText("");
+        textarea_worldName.append("World 2");
+        
+       // textarea_worldName.setText("World 1");
+    }//GEN-LAST:event_button_world2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,7 +226,12 @@ public class Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton button_quit;
     private javax.swing.JButton button_start;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton button_world1;
+    private javax.swing.JButton button_world2;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel label_title;
+    private javax.swing.JLabel label_world;
+    private javax.swing.JTextArea textarea_worldName;
     // End of variables declaration//GEN-END:variables
 }
