@@ -13,5 +13,6 @@ public class StartGame {
     
     public static void begin(){
         OpenWindow.open();
+        System.out.println("fuck off");
     }
 }
