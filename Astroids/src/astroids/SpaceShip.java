@@ -5,6 +5,8 @@
  */
 package astroids;
 
+import java.awt.Graphics;
+
 /**
  *
  * @author Taylor
@@ -12,12 +14,17 @@ package astroids;
 public class SpaceShip {
     private int xPos;
     private int yPos;
+    private int width = 5;
+    private int height = 10;
     private String name;
     public SpaceShip(String n){
        name = n;
        xPos = 0;
        yPos = 0;
         
+    }
+    public void draw(Graphics g){
+        g.drawRect(xPos, yPos, width, height);
     }
     
     public int getXPos(){
