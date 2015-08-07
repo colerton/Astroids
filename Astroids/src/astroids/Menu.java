@@ -100,7 +100,7 @@ public class Menu extends javax.swing.JFrame {
     private void button_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_startActionPerformed
         
        //opens the game window
-        StartGame.begin();
+        StartGame.begin("Map1");
         
         
     }//GEN-LAST:event_button_startActionPerformed
